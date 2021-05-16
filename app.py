@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for
-from flask_pymongo import flask_pymongo
+from flask_pymongo import PyMongo
 import scraping    # this imports the file that I made called scraping.py
 
 # set up Flask
@@ -23,4 +23,4 @@ def scrape():
     return redirect('/', code=302)            # redirect back to the home screen
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
