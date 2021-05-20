@@ -44,10 +44,13 @@
       </div>
     </div>
     <div id='hemispheres'>
+      <h2>Mars Hemispheres</h2>
       {% for hemisphere in mars.hemispheres %}
       <img src='{{hemisphere.URL}}'>
+      <h1> {{hemisphere.Title}} </h1>
       {% endfor %}
     </div>
   </div>
 </body>
+
 </html>

@@ -103,7 +103,7 @@ def scrape_hemisphere(browser):
     browser.visit(url)
     html = browser.html
     img_soup = soup(html, 'html.parser')
-    hemisphere_list = []
+    hemisphere_image_list = []
     titles = img_soup.find_all('h3')[:-1]
 
     for i, title in enumerate(titles):
@@ -113,10 +113,10 @@ def scrape_hemisphere(browser):
         thumb_click = browser.find_by_tag('img.thumb')[i].click()
         src = browser.find_by_tag('img.wide-image')['src']
         hemisphere_dict["URL"]=src
-        hemisphere_list.append(hemisphere_dict)
+        hemisphere_image_list.append(hemisphere_dict)
         browser.back()
 
-    return hemisphere_list
+    return hemisphere_image_list
 
 if __name__ == "__main__":
 
