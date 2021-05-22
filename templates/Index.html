@@ -43,12 +43,20 @@
         </div>
       </div>
     </div>
-    <div id='hemispheres'>
-      <h2>Mars Hemispheres</h2>
-      {% for hemisphere in mars.hemispheres %}
-      <img src='{{hemisphere.URL}}'>
-      <h1> {{hemisphere.Title}} </h1>
-      {% endfor %}
+    <div class="row " id='hemispheres'>
+      <div class="col-xs-12 text-center">
+        <h1> MARS HEMISPHERES </h1>
+        <h1> </h1>
+        <ol style="column-count: 4;">
+          {% for hemisphere in mars.hemispheres %}
+          <h4> {{hemisphere.Title}} </h4>
+          <div class="frame">
+            <img src='{{hemisphere.URL}}' class="img-responsive" alt="Responsive image">
+          </div>
+          {% endfor %} -->
+
+        </ol>
+      </div>
     </div>
   </div>
 </body>
